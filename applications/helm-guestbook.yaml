@@ -12,6 +12,8 @@ spec:
     path: helm-guestbook
     repoURL: "https://github.com/dbarattini-pg/argocd-lab-apps"
     targetRevision: main
+    helm:
+      releaseName: guestbook
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
