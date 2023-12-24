@@ -12,8 +12,9 @@ spec:
     - repoURL: "https://charts.bitnami.com/bitnami"
       chart: redis
       targetRevision: 17.10.2
-      valuesFiles:
-        - $values/redis/values.yaml
+      helm:
+        valuesFiles:
+          - $values/redis/values.yaml
     - repoURL: "https://prometheus-community.github.io/helm-charts"
       chart: prometheus-redis-exporter
       targetRevision: 5.3.2
