@@ -12,6 +12,8 @@ spec:
     path: guestbook
     repoURL: "https://github.com/dbarattini-pg/argocd-lab-apps"
     targetRevision: main
+    directory:
+      recurse: true
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
