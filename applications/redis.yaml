@@ -13,7 +13,7 @@ spec:
       chart: redis
       targetRevision: 17.10.2
       helm:
-        valuesFiles:
+        valueFiles:
           - $values/redis/values.yaml
     - repoURL: "https://prometheus-community.github.io/helm-charts"
       chart: prometheus-redis-exporter
