@@ -7,9 +7,9 @@ spec:
   description: "Demo project"
   sourceRepos:
     - '*'
-  destination:
-    server: "*"
-    namespace: "*"
+  destinations:
+    - server: "*"
+      namespace: "*"
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
