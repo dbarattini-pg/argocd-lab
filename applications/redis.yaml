@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: redis
+  namespace: argocd
+spec: 
+  destination: 
+    namespace: redis
+    server: "https://kubernetes.default.svc"
+  project: default
+  sources:
+    - repoURL: "https://charts.bitnami.com/bitnami"
+      chart: redis
+      targetRevision: 17.10.2
+    - repoURL: "https://prometheus-community.github.io/helm-charts"
+      chart: prometheus-redis-exporter
+      targetRevision: 5.3.2
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
