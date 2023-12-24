@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: guestbook
+  namespace: argocd
+spec: 
+  destination: 
+    namespace: guestbook
+    server: "https://kubernetes.default.svc"
+  project: demo-project
+  source: 
+    path: guestbook
+    repoURL: "https://github.com/dbarattini-pg/argocd-lab-apps"
+    targetRevision: main
+    directory:
+      recurse: true
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
