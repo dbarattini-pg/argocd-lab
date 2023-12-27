@@ -20,4 +20,4 @@ spec:
   - name: ci-role
     description: Sync privileges for role-project
     policies:
-      - p, project:role-project:ci-role, applications, sync, role-project/*, allow
+      - p, proj:role-project:ci-role, applications, sync, role-project/*, allow
