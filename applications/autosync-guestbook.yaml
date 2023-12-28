@@ -9,7 +9,7 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: autosync-guestbook
+    path: guestbook
     repoURL: "https://github.com/dbarattini-pg/argocd-lab-apps"
     targetRevision: main
     directory:
